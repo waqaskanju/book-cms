@@ -6,19 +6,23 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Books from './routes/Books';
 import Categories from './routes/Categories';
 import Navigation from './components/Navigation';
+import store from './redux/configureStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </Router>
+    </Provider>
   </React.StrictMode>,
 );
