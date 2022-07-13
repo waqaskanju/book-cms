@@ -1,10 +1,10 @@
-const ADDBOOK = 'ADDBOOK'; // Define a constant for addBook action types
-const REMOVEBOOK = 'REMOVEBOOK'; // Define a constant for removeBook action types
+const ADD_BOOK = 'ADD_BOOK'; // Define a constant for addBook action types
+const REMOVE_BOOK = 'REMOVE_BOOK'; // Define a constant for removeBook action types
 
 // Add book Reducer
 const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case ADDBOOK:
+    case ADD_BOOK:
       return [
         ...state,
         {
@@ -13,7 +13,7 @@ const bookReducer = (state = [], action) => {
           author: action.author,
         },
       ];
-    case REMOVEBOOK:
+    case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.id);
     default:
       return state;
@@ -23,7 +23,7 @@ const bookReducer = (state = [], action) => {
 // Action Creater to Add book
 
 export const addBook = (id, title, author) => ({
-  type: ADDBOOK,
+  type: ADD_BOOK,
   id,
   title,
   author,
@@ -31,7 +31,7 @@ export const addBook = (id, title, author) => ({
 
 // Action Creater to Remove book
 export const removeBook = (id) => ({
-  type: REMOVEBOOK,
+  type: REMOVE_BOOK,
   id,
 });
 
