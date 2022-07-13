@@ -1,5 +1,5 @@
 // Add constat action type for status.
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 // Add action creater to check status.
 export const checkStatus = () => ({

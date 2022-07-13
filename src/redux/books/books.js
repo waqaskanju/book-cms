@@ -1,5 +1,5 @@
-const ADD_BOOK = 'ADD_BOOK'; // Define a constant for addBook action types
-const REMOVE_BOOK = 'REMOVE_BOOK'; // Define a constant for removeBook action types
+const ADD_BOOK = 'bookstore/books/ADD_BOOK'; // Define a constant for addBook action types
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK'; // Define a constant for removeBook action types
 
 // Add book Reducer
 const bookReducer = (state = [], action) => {
