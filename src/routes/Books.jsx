@@ -1,4 +1,4 @@
-import AddBook from '../components/AddBook';
+import AddNewBook from '../components/AddBook';
 
 export default function Books() {
   return (
@@ -142,7 +142,7 @@ export default function Books() {
         </ul>
         <div className="horizontal-divider" />
       </div>
-      <AddBook />
+      <AddNewBook />
     </div>
   );
 }

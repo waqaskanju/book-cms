@@ -7,7 +7,7 @@ export const checkStatus = () => ({
 });
 
 // Add reducer for checkstatus.
-const bookStatusReducer = (state = [], action) => {
+const categoryReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return ['Comming Soon'];
@@ -16,4 +16,4 @@ const bookStatusReducer = (state = [], action) => {
   }
 };
 
-export default bookStatusReducer;
+export default categoryReducer;
