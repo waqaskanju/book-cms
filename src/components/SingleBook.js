@@ -5,6 +5,11 @@ import { removeBook } from '../redux/books/books';
 
 const SingleBook = ({ id, title, author }) => {
   const dispatch = useDispatch();
+
+  // Delete a book
+  const handleDelete = (id) => {
+    dispatch(removeBook(id));
+  };
   // Dispatch a book
   return (
     <li>
@@ -19,7 +24,9 @@ const SingleBook = ({ id, title, author }) => {
                 Comments
               </button>
               <div className="vertical-divider" />
-              <button className="button-outline" type="button" onClick={() => dispatch(removeBook(id))}>
+              {/* <button className="button-outline" type="button"
+              onClick={() => dispatch(removeBook(id))}> */}
+              <button className="button-outline" type="button" onClick={() => handleDelete(id)}>
                 Remove
               </button>
               <div className="vertical-divider" />
