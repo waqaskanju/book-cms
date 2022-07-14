@@ -7,13 +7,13 @@ export const checkStatus = () => ({
 });
 
 // Add reducer for checkstatus.
-const bookStatusReducer = (state = [], action) => {
+const categoryReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return ['Under construction'];
+      return ['Comming Soon'];
     default:
       return state;
   }
 };
 
-export default bookStatusReducer;
+export default categoryReducer;
