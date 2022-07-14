@@ -13,8 +13,7 @@ export default function AddBook() {
           <option value="Action">Action</option>
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
-        </select
-              >
+        </select>
         <button className="primary-button-big" type="submit">
           ADD BOOK
         </button>

@@ -10,7 +10,7 @@ export const checkStatus = () => ({
 const bookStatusReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return ['Under construction'];
+      return ['Comming Soon'];
     default:
       return state;
   }

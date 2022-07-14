@@ -1,8 +1,27 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK'; // Define a constant for addBook action types
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK'; // Define a constant for removeBook action types
 
+// default values for books.
+const books = [
+  {
+    id: 1,
+    title: 'First book',
+    author: 'Authoer 1',
+  },
+  {
+    id: 2,
+    title: '2nd book',
+    author: 'author 2',
+  },
+  {
+    id: 3,
+    title: '3rd book',
+    author: 'author 3',
+  },
+];
+
 // Add book Reducer
-const bookReducer = (state = [], action) => {
+const bookReducer = (state = books, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
