@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+/* import { removeBook } from '../redux/books/books'; */
+import { deleteBooksAsync } from '../api-service';
 
 const SingleBook = ({ id, title, author }) => {
   const dispatch = useDispatch();
 
   // Delete a book
   const handleDelete = (id) => {
-    dispatch(removeBook(id));
+    dispatch(deleteBooksAsync(id));
   };
   // Dispatch a book
   return (
@@ -24,8 +25,6 @@ const SingleBook = ({ id, title, author }) => {
                 Comments
               </button>
               <div className="vertical-divider" />
-              {/* <button className="button-outline" type="button"
-              onClick={() => dispatch(removeBook(id))}> */}
               <button className="button-outline" type="button" onClick={() => handleDelete(id)}>
                 Remove
               </button>
@@ -62,7 +61,7 @@ const SingleBook = ({ id, title, author }) => {
 
 // Checking for the reuqired type of data.
 SingleBook.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

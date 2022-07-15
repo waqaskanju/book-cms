@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+/* import { addBook } from '../redux/books/books'; */
+import { addBooksAsync } from '../api-service';
 
 // Creating hooks for title and author.
 const AddNewBook = () => {
@@ -13,8 +14,15 @@ const AddNewBook = () => {
   // Handle form int to add it to book array
   const handleSubmit = (e) => {
     e.preventDefault();
-    const id = Math.random();
-    dispatch(addBook(id, title, author));
+    // eslint-disable-next-line camelcase
+    const item_id = Math.random();
+    const category = 'Crime';
+    const author = 'A.k Khan';
+    /*     dispatch(addBook(id, title, author)); */
+    dispatch(addBooksAsync({
+      // eslint-disable-next-line camelcase
+      item_id, title, author, category,
+    }));
     setTitle((e.target.title.value = ''));
     setAuthor((e.target.author.value = ''));
   };
@@ -36,7 +44,6 @@ const AddNewBook = () => {
           name="author"
           className="input author-input"
           placeholder="Book author"
-          required="required"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
