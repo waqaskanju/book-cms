@@ -18,7 +18,6 @@ const AddNewBook = () => {
     const item_id = Math.random();
     const category = 'Crime';
     const author = 'A.K Khan';
-    /*     dispatch(addBook(id, title, author)); */
     dispatch(addBooksAsync({
       // eslint-disable-next-line camelcase
       item_id, title, author, category,
