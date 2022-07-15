@@ -17,6 +17,7 @@ const AddNewBook = () => {
     // eslint-disable-next-line camelcase
     const item_id = Math.random();
     const category = 'Crime';
+    const author = 'A.k Khan';
     /*     dispatch(addBook(id, title, author)); */
     dispatch(addBooksAsync({
       // eslint-disable-next-line camelcase
@@ -43,7 +44,6 @@ const AddNewBook = () => {
           name="author"
           className="input author-input"
           placeholder="Book author"
-          required="required"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
