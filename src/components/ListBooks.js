@@ -4,7 +4,6 @@ import AddNewBook from './AddBook';
 import SingleBook from './SingleBook';
 import { getBooks } from '../api-service';
 
-// console.log(createBookList());
 // Extract data from redux store using selector.
 const ListBooks = () => {
   const books = useSelector((state) => state.books);

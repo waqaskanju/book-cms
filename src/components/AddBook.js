@@ -1,6 +1,6 @@
+/* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-/* import { addBook } from '../redux/books/books'; */
 import { addBooksAsync } from '../api-service';
 
 // Creating hooks for title and author.
@@ -14,13 +14,10 @@ const AddNewBook = () => {
   // Handle form int to add it to book array
   const handleSubmit = (e) => {
     e.preventDefault();
-    // eslint-disable-next-line camelcase
     const item_id = Math.random();
     const category = 'Crime';
     const author = 'A.K Khan';
-    /*     dispatch(addBook(id, title, author)); */
     dispatch(addBooksAsync({
-      // eslint-disable-next-line camelcase
       item_id, title, author, category,
     }));
     setTitle((e.target.title.value = ''));
