@@ -318,3 +318,7 @@ body {
   opacity: 1;
   color: #121212;
 }
+
+#author {
+  display: none;
+}
