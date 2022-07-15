@@ -15,7 +15,6 @@ export default function Navigation() {
             to="/"
           >
             Books
-
           </Link>
         </li>
         <li><Link className="nav-link" to="/Categories">CATEGORIES</Link></li>
@@ -26,7 +25,6 @@ export default function Navigation() {
           <FontAwesomeIcon icon={faUser} />
         </span>
       </button>
-
     </nav>
   );
 }
